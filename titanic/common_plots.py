@@ -28,10 +28,6 @@ def plot_survived_by_category(plots: List[SurvivedPlotData]) -> None:
       title, labels, counts = plot 
       x = np.arange(len(labels))
 
-      ex_count = counts[1]
-
-      print('')
-
       died_counts = [count[0] if len(count) >= 1 else 0 for count in counts]
       survived_counts = [count[1] if len(count) >= 2 else 0 for count in counts]
 
