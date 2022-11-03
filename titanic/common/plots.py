@@ -8,6 +8,7 @@ SurvivedPlotData = Tuple[str, List[str], List[List[int]]]
 def plot_survived_by_category(plots: List[SurvivedPlotData]) -> None:
   n_cols = 3
   n_rows = (len(plots) // (n_cols + 1)) + 1
+  
 
   fig, axes = plt.subplots(n_rows, n_cols, figsize=(12, (4 * n_rows)))
 
