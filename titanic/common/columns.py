@@ -1,3 +1,4 @@
+# Original columns.
 PASSENGER_ID = 'PassengerId'
 SURVIVED = 'Survived'
 P_CLASS = 'Pclass'
@@ -10,3 +11,6 @@ TICKET = 'Ticket'
 FARE = 'Fare'
 CABIN = 'Cabin'
 EMBARKED = 'Embarked'
+
+# Derived columns.
+TITLE = 'Title'
