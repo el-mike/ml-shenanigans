@@ -14,3 +14,5 @@ EMBARKED = 'Embarked'
 
 # Derived columns.
 TITLE = 'Title'
+AGE_GROUP = 'AgeGroup'
+PERSON_TYPE = 'PersonType'
