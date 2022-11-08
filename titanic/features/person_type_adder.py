@@ -6,6 +6,7 @@ import common.columns as columns
 
 CHILD_GROUP = 'child'
 ADULT_GROUP = 'adult'
+SENIOR_GROUP = 'senior'
 
 CHILD_TYPE = 'child'
 MAN_TYPE = 'man'
@@ -22,8 +23,8 @@ class PersonTypeAdder(BaseEstimator, TransformerMixin):
   def transform(self, X: pd.DataFrame, y=None):
     X[columns.AGE_GROUP] = pd.cut(
       X[columns.AGE],
-      bins=[0, self.adult_age, self.senior_age],
-      labels=[CHILD_GROUP, ADULT_GROUP]
+      bins=[0, self.adult_age, self.senior_age, 100],
+      labels=[CHILD_GROUP, ADULT_GROUP, SENIOR_GROUP]
     )
 
     person_types = X.apply(lambda row: self._get_type(row), axis=1)
